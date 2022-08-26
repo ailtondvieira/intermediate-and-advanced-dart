@@ -7,22 +7,16 @@ import '../../domain/entities/product_entity.dart';
 // Ele será um reflexo do nosso Entity, porém poderemos ter os atributos com nomes diferentes,
 // já que esses nomes aqui no DTO precisarão ser um reflexo dos campos na API
 class ProductDto extends ProductEntity {
-  int id;
-  String nameProduct;
-  String brand;
-  String category;
-  double price;
-  int quantity;
-
+  
   // Como nós temos que extender de ProductEntity, temos que passar os valores dessa classe
   // para o product entity, fazemos isso através do : super.
   ProductDto({
-    required this.id,
-    required this.nameProduct,
-    required this.brand,
-    required this.category,
-    required this.price,
-    required this.quantity,
+    required int id,
+    required String nameProduct,
+    required String brand,
+    required String category,
+    required double price,
+    required int quantity,
   }) : super(
           name: nameProduct,
           brand: brand,
